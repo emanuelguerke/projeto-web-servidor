@@ -1,3 +1,3 @@
 <?php
 
-require("view/login.view.php");
+require("view/registrar.view.php");
