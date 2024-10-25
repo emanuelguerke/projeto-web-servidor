@@ -1,3 +1,3 @@
 <?php
 
-echo"login";
+require('view/login.view.php');

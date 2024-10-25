@@ -3,9 +3,8 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
   body {
-    font-family: "Montserrat";
+    font-family: "arial";
     color: #404040;
     display: flex;
     align-items: center;
@@ -13,12 +12,11 @@
     height: 100vh;
     padding: 20px;
     background-color: #6b6b6b;
-   
     background-size: cover;
     background-position: 50%;
   }
   
-  form {
+  div.formulario {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -47,6 +45,8 @@
     width: 200px;
     border-right-width: 4px;
     border-bottom-width: 4px;
+    align-self: center;
+    width: 300px;
   }
   button {
     padding: 10px 15px;
@@ -93,8 +93,9 @@
     gap: 5px;
     font-size: 14px;
   }
-  
+
   .esqueceu-senha {
     text-align: center;
   }
+  
   

@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" href="style/registrar.css">
-<form action="../controller/registrar.controller.php" method="get">
+<form action="index.php?acao=registrar" method="get">
       <div class="titulo">
         <h1>Faça o seu cadastro</h1>
         <div class="barra-horizontal"></div>
@@ -8,17 +8,17 @@
     
       <div class="campo-input">
         <label for="nome">Nome completo</label>
-        <input type="text" id="nome" required="true"/>
+        <input type="text" id="nome"/>
       </div>
 
       <div class="campo-input">
         <label for="email">E-mail</label>
-        <input type="email" id="email" required="true" />
+        <input type="email" id="email"/>
       </div>
 
       <div class="campo-input">
         <label for="password">Senha</label>
-        <input type="password" id="password" required="true"/>
+        <input type="password" id="password"/>
       </div>
       
       <div class="campo-input">
