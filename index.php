@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+        
         $acao = $_GET['acao'] ?? 'index';
         if ($acao == 'erro-campos') {
             echo 'preencha todos os campos';
@@ -17,6 +18,7 @@
         }if ($acao == 'registrar') {
             require('controller\registrar.controller.php');
         }else{
+            
             require("controller/login.controller.php");
         }
         

@@ -5,6 +5,8 @@
     if($password == '' || $email == ''){
         header('Location: index.php?acao=erro-campos');
     }else{
-        echo "$password e o $email e checkbox $checkbox" ;
+       // echo "$password e o $email e checkbox $checkbox" ;
+      //  require('controller\agenda.controller.php');
+        header('Location: view\agenda.view.php');
     }
  
