@@ -1,6 +1,7 @@
 
 <link rel="stylesheet" href="style/registrar.css">
-<form action="index.php?acao=registrar" method="post">
+<div class="formulario">
+<form action="index.php?acao=registrarusuario" method="post">
       <div class="titulo">
         <h1>Faça o seu cadastro</h1>
         <div class="barra-horizontal"></div>
@@ -31,8 +32,10 @@
 
       <br>
       
-      <button>Registrar</button>
+      <button type="submit">Registrar</button>
    
      
 
     </form>
+</div>
+ 

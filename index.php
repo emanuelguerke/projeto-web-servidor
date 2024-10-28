@@ -15,11 +15,19 @@
 
         if ($acao == 'logar') {
             require('controller/logar.controller.php');
-        }if ($acao == 'registrar') {
-            require('controller\registrar.controller.php');
-        }else{
+           // header('Location: controller/logar.controller.php');
             
-            require("controller/login.controller.php");
+        }
+        if ($acao == 'registrarusuario') {
+            require('controller/registrar.store.controller.php');
+        }
+        if ($acao == 'registrar') {
+            require('controller/registrar.controller.php');
+         //   header('Location: controller/registrar.controller.php');
+        }
+        else{
+            require_once("controller/login.controller.php");
+        //    header('Location: controller/login.controller.php');
         }
         
     ?>
