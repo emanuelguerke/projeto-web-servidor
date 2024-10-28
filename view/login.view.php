@@ -1,8 +1,11 @@
 
+<head>
 <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
 <div class="formulario">
 <form class= "logar" action="index.php?acao=logar" method="POST">
-  
+  <div id="mensagem"></div>
       <div class="titulo">
         <h1>Faça o login</h1>
         <div class="barra-horizontal"></div>
@@ -37,4 +40,4 @@
     </form>
     </div>
 </div>
-   
+</body>

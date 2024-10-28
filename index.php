@@ -10,7 +10,8 @@
         
         $acao = $_GET['acao'] ?? 'index';
         if ($acao == 'erro-campos') {
-            echo 'preencha todos os campos';
+           // $mensagem = "erro nos campos";
+            echo '<div><p style="color: black">preencha todos os campos</p><div>';
         }
 
         if ($acao == 'logar') {
