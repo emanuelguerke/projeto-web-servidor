@@ -9,10 +9,7 @@
     <?php
         
         $acao = $_GET['acao'] ?? 'index';
-        if ($acao == 'erro-campos') {
-           // $mensagem = "erro nos campos";
-            echo '<div><p style="color: black">preencha todos os campos</p><div>';
-        }
+      
 
         if ($acao == 'logar') {
             require('controller/logar.controller.php');

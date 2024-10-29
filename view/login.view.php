@@ -7,10 +7,24 @@
 <form class= "logar" action="index.php?acao=logar" method="POST">
   <div id="mensagem"></div>
       <div class="titulo">
+      <?php 
+       
+       if(isset($_GET['acao'])){
+         $acao = $_GET['acao'];
+         if ($acao == 'erro-campos') {
+           // $mensagem = "erro nos campos";
+            echo '<div><p style="color: black">preencha todos os campos</p><div>';
+        }
+       }
+ 
+       ?>
         <h1>Faça o login</h1>
         <div class="barra-horizontal"></div>
       </div>
       <br>
+     
+  
+
       <div class="campo-input">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" />
