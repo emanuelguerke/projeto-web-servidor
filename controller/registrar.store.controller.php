@@ -6,7 +6,7 @@
        $sexo = $_POST['sexo'] ??'';
        if($passwordcadastro == '' || $emailcadastro == '' || $sexo == '' || $nomecadastro == '') {
         //   header('Location: index.php?acao=erro-campos');
-        echo 'campos não preenchidos';
+      //  echo 'campos não preenchidos';
        }else{
           // echo "$password e o $email e checkbox $checkbox" ;
          //  require('controller\agenda.controller.php');

@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(empty($_SESSION['logado']) || $_SESSION['logado'] == false) {
+        header('Location: ..\index.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -46,6 +54,7 @@
                     <li><a href="#">Pessoa</a></li>
                 </ul>
             </section>
+            <a href="..\controller\logout.controller.php">Sair</a>
         </main>
         <footer>
             <p>&copy; UTFPR 2024 Agenda de Contatos.</p>
