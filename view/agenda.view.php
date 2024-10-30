@@ -42,7 +42,7 @@
                     <?php  
                      if(isset($_SESSION['contatos'])){
                         $contatos = $_SESSION['contatos'];
-                        foreach($contatos as $contato): ?> <li><a href="contato.view.php"><?php echo $contato['name']; ?> - <?php echo $contato['email']; ?> - <?php echo $contato['phone']; ?></a></li> <?php endforeach; }?>
+                        foreach($contatos as $key=> $contato): ?> <li><a href=contato.view.php?<?php echo "index=$key>"; ?> <?php echo $contato['name']; ?> - <?php echo $contato['email']; ?> - <?php echo $contato['phone']; ?></a></li> <?php endforeach; }?>
                 </ul>
             </section>
             
