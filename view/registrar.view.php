@@ -34,7 +34,6 @@
       
       <button type="submit">Registrar</button>
    
-     
 
     </form>
 </div>

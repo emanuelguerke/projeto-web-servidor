@@ -1,6 +1,6 @@
 <?php
     session_start();
-
+   
     if(empty($_SESSION['logado']) || $_SESSION['logado'] == false) {
         header('Location: ..\index.php');
     }
@@ -17,12 +17,13 @@
 <body>
     <div class="container">
         <header>
+           
             <h1>Bem-vindo à sua Agenda de Contatos</h1>
         </header>
         <main>
             <section id="contact-form">
                 <h2>Adicionar Novo Contato</h2>
-                <form>
+                <form  action="../index.php?acao=adicionarcontato" method="POST">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" required>
                     
@@ -35,28 +36,19 @@
                     <button type="submit">Adicionar Contato</button>
                 </form>
             </section>
+            <h2>Lista de Contatos</h2>
             <section id="contact-list">
-                <h2>Lista de Contatos</h2>
                 <ul>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
-                    <li><a href="#">Pessoa</a></li>
+                    <?php  
+                     if(isset($_SESSION['contatos'])){
+                        $contatos = $_SESSION['contatos'];
+                        foreach($contatos as $contato): ?> <li><a href="contato.view.php"><?php echo $contato['name']; ?> - <?php echo $contato['email']; ?> - <?php echo $contato['phone']; ?></a></li> <?php endforeach; }?>
                 </ul>
             </section>
-            <a href="..\controller\logout.controller.php">Sair</a>
+            
         </main>
         <footer>
+            <a href="..\controller\logout.controller.php" class="button">Deslogar</a>
             <p>&copy; UTFPR 2024 Agenda de Contatos.</p>
         </footer>
     </div>

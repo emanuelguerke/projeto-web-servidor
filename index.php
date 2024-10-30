@@ -23,8 +23,11 @@
             require('controller/registrar.controller.php');
          //   header('Location: controller/registrar.controller.php');
         }
+        if ($acao == 'adicionarcontato') {
+            require('controller/adicionarcontato.controller.php');
+        }
         else{
-            require_once("controller/login.controller.php");
+            require("controller/login.controller.php");
         //    header('Location: controller/login.controller.php');
         }
         

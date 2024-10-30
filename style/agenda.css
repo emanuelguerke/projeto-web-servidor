@@ -9,6 +9,21 @@ body {
     height: 100vh;
 }
 
+li {
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+a.button {
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    padding: 5px 10px;
+    vertical-align: middle
+}
+
 .container {
     width: 100%;
     max-width: 600px;

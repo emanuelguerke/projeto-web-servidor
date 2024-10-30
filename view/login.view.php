@@ -1,4 +1,3 @@
-
 <head>
 <link rel="stylesheet" href="style/login.css">
 </head>
@@ -16,15 +15,12 @@
             echo '<div><p style="color: black">preencha todos os campos</p><div>';
         }
        }
- 
        ?>
+       
         <h1>Faça o login</h1>
         <div class="barra-horizontal"></div>
       </div>
       <br>
-     
-  
-
       <div class="campo-input">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" />
