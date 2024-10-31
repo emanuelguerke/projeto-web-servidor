@@ -14,10 +14,10 @@
         </form>
         <h1>Contato</h1>
         <div class="contact-card">
-            <img src="foto1.jpg" alt="Foto de Contato">
+            <img src= <?php session_start(); $index = $_GET['index']; echo "../image/image{$index}.jpg"?> alt="Foto de Contato">
             <div class="contact-info">
                 <?php
-                    session_start();
+                 //   session_start();
                     if (isset($_GET['index']) && isset($_SESSION['contatos'])){
                         $index = $_GET['index'];
                         $contatos = $_SESSION['contatos'];

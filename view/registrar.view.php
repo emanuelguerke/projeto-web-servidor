@@ -2,11 +2,11 @@
 <link rel="stylesheet" href="../style/registrar.css">
 <div class="formulario">
 <form action="index.view.php?acao=registrarusuario" method="post">
+
       <div class="titulo">
         <h1>Faça o seu cadastro</h1>
         <div class="barra-horizontal"></div>
       </div>
-    
       <div class="campo-input">
         <label for="nome">Nome completo</label>
         <input type="text" id="nome" name="nomecadastro"/>
@@ -33,7 +33,18 @@
       <br>
       
       <button type="submit">Registrar</button>
-   
+
+      <?php 
+      if(isset($_GET['acao'])){
+         $acao = $_GET['acao'];
+         if ($acao == 'erro-campos-cadastro') {
+           // $mensagem = "erro nos campos";
+            echo '<div><p style="color: red">*preencha todos os campos</p><div>';
+        }else if($acao == 'email-cadastro'){
+          echo '<div><p style="color: red">*email já cadastrado</p><div>';
+        }
+       }
+      ?>
 
     </form>
 </div>

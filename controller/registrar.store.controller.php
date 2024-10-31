@@ -6,7 +6,7 @@
        $sexo = $_POST['sexo'] ??'';
        if($passwordcadastro == '' || $emailcadastro == '' || $sexo == '' || $nomecadastro == '') {
         //   header('Location: index.view.php?acao=erro-campos');
-        header('Location: registrar.view.php');
+             header('Location: index.view.php?acao=erro-campos-cadastro');
         
        }else{
           // echo "$password e o $email e checkbox $checkbox" ;

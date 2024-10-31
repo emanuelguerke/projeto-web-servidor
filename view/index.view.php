@@ -12,6 +12,8 @@
       
         if ($acao == 'erro-campos') {
             require("../controller/login.controller.php");
+        }else if ($acao == 'erro-campos-cadastro') {
+            require("../controller/registrar.controller.php");
         }
         else if ($acao == 'email-senha') {
             require("../controller/login.controller.php");
