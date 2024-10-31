@@ -23,4 +23,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Recupera os contatos armazenados na sessão
 $contatos = $_SESSION['contatos'];
 
-header('Location: view\agenda.view.php');
+header('Location: agenda.view.php');

@@ -24,6 +24,10 @@ h1 {
     color: #333;
 }
 
+form{
+    margin:0px; padding:0px; display:inline;
+}
+
 .contact-card {
     background: #fff;
     margin: 20px 0;

@@ -2,12 +2,11 @@
     session_start();
    
     if(empty($_SESSION['logado']) || $_SESSION['logado'] == false) {
-        header('Location: ..\index.php');
+       header('Location: login.view.php');
+      // require("../controller/login.controller.php");
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,7 @@
         <main>
             <section id="contact-form">
                 <h2>Adicionar Novo Contato</h2>
-                <form  action="../index.php?acao=adicionarcontato" method="POST">
+                <form  action="index.view.php?acao=adicionarcontato" method="POST">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" required>
                     
@@ -53,4 +52,4 @@
         </footer>
     </div>
 </body>
-</html>
+

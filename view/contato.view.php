@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="container">
-        <button class="back-btn">Voltar</button>
+        <form action="../view/agenda.view.php">
+            <button class="back-btn">Voltar</button>
+        </form>
         <h1>Contato</h1>
         <div class="contact-card">
             <img src="foto1.jpg" alt="Foto de Contato">
@@ -25,8 +27,12 @@
                     }
                 ?>        
                 <div class="buttons">
+                <form class= "editar" action="#">
                     <button class="edit-btn">Editar</button>
+                </form>
+                <form class= "excluir" action=excluircontato.controller.php?>
                     <button class="delete-btn">Excluir</button>
+                </form>
                 </div>
             </div>
         </div>

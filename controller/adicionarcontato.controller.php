@@ -1,2 +1,2 @@
 <?php
-require("model\adicionarcontato.model.php");
+require("../model/adicionarcontato.model.php");

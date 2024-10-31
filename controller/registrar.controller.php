@@ -1,2 +1,2 @@
 <?php
-require("view/registrar.view.php");
+require("registrar.view.php");

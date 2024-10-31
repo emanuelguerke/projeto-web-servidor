@@ -1,9 +1,9 @@
 <head>
-<link rel="stylesheet" href="style/login.css">
+<link rel="stylesheet" href="../style/login.css">
 </head>
 <body>
 <div class="formulario">
-<form class= "logar" action="index.php?acao=logar" method="POST">
+<form class= "logar" action="index.view.php?acao=logar" method="POST">
   <div id="mensagem"></div>
       <div class="titulo">
       <?php 
@@ -13,6 +13,8 @@
          if ($acao == 'erro-campos') {
            // $mensagem = "erro nos campos";
             echo '<div><p style="color: black">preencha todos os campos</p><div>';
+        }else if($acao == 'email-senha'){
+          echo '<div><p style="color: black">Senha ou Email incorretos</p><div>';
         }
        }
        ?>
@@ -45,7 +47,7 @@
       
     </form>
     <div>
-    <form action="index.php?acao=registrar" method="POST">
+    <form action="registrar.view.php">
       <button class="nova-conta">Criar nova conta</button>
     </form>
     </div>
