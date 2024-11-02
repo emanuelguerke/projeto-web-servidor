@@ -9,17 +9,17 @@
       </div>
       <div class="campo-input">
         <label for="nome">Nome completo</label>
-        <input type="text" id="nome" name="nomecadastro"/>
+        <input type="text" id="nome" name="nome"/>
       </div>
 
       <div class="campo-input">
         <label for="email">E-mail</label>
-        <input type="email" id="email" name = "emailcadastro"/>
+        <input type="email" id="email" name = "email"/>
       </div>
 
       <div class="campo-input">
         <label for="password">Senha</label>
-        <input type="password" id="password" name="passwordcadastro"/>
+        <input type="password" id="password" name="password"/>
       </div>
       
       <div class="campo-input">
@@ -32,7 +32,7 @@
 
       <br>
       
-      <button type="submit">Registrar</button>
+      <button type="submit" value="registrar">Registrar</button>
 
       <?php 
       if(isset($_GET['acao'])){
