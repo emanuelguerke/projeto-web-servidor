@@ -27,16 +27,17 @@
                     }
                 ?>        
                 <div class="buttons">
-                <form class= "editar" action="#">
+                <form class= "editar"  action="../controller/editarcontato.controller.php" method="POST">
+                    <input type="hidden" name="index" value="<?php echo $index; ?>"> 
                     <button class="edit-btn">Editar</button>
                 </form>
-                <form class= "excluir" action=excluircontato.controller.php?>
-                    <button class="delete-btn">Excluir</button>
+                <form class= "excluir"  action="../controller/excluircontato.controller.php" method="POST">
+                    <input type="hidden" name="index" value="<?php echo $index; ?>">
+                    <button class="delete-btn" name="delete">Excluir</button>
                 </form>
                 </div>
             </div>
         </div>
-        <!-- Adicione mais cartões de contato conforme necessário -->
     </div>
 </body>
 </html>

@@ -1,2 +1,2 @@
 <?php 
-    require("/model/excluircontato.model.php");
+    require("../model/excluircontato.model.php");
