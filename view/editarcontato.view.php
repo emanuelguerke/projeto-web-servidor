@@ -1,6 +1,8 @@
 <?php
+require("../controller/verificalogado.controller.php");
 require("../controller/editacontato.controller.php")
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

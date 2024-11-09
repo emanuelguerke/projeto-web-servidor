@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    //sessão startada no verificar logado
+   // session_start();
     $index = $_POST['index'];
     $contato = $_SESSION['contatos'][$index];
 

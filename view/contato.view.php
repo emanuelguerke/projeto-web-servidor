@@ -1,3 +1,6 @@
+<?php
+require("../controller/verificalogado.controller.php");
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -14,7 +17,7 @@
         </form>
         <h1>Contato</h1>
         <div class="contact-card">
-            <img src= <?php session_start(); $index = $_GET['index']; echo "../image/image{$index}.jpg"?> alt="Foto de Contato">
+            <img src= <?php $index = $_GET['index']; echo "../image/image{$index}.jpg"?> alt="Foto de Contato">
             <div class="contact-info">
                 <?php
                  //   session_start();
