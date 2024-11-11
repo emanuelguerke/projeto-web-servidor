@@ -1,26 +1,41 @@
 <?php
-session_start();
+    session_start();
+    class Adicionarcontato{
+        private $name;
+        private $email;
+        private $phone;
+        private $contatos;
 
-// Vetor para armazenar os contatos
-if (!isset($_SESSION['contatos'])) {
-    $_SESSION['contatos'] = array();
-}
+        public function __construct(){
+            // Vetor para armazenar os contatos
+            if (!isset($_SESSION['contatos'])) {
+                $_SESSION['contatos'] = array();
+            }
+        }
+        // Função para adicionar um contato
+        public function adicionar_contato($name, $email, $phone) {
+            $contato = array('name' => $name, 'email' => $email, 'phone'=> $phone);
+            $_SESSION['contatos'][] = $contato;
 
-// Função para adicionar um contato
-function adicionar_contato($name, $email, $phone) {
-    $contato = array('name' => $name, 'email' => $email, 'phone'=> $phone);
-    $_SESSION['contatos'][] = $contato;
-}
+            $contatos = $_SESSION['contatos'];
+            header('Location: agenda.view.php');
+        }
+        public function __get($propriedade){
+            return $this->$propriedade;
+        }
+        public function __set($propriedade, $valor){
+            $this->$propriedade = $valor;
+        }
 
-// Processa o formulário se os dados foram enviados
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    adicionar_contato($name, $email, $phone);
-}
 
-// Recupera os contatos armazenados na sessão
-$contatos = $_SESSION['contatos'];
+        
+    }
 
-header('Location: agenda.view.php');
+
+
+
+
+
+
+
+

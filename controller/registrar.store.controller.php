@@ -16,4 +16,6 @@
        //    header('Location: agenda.view.php');
            // header('Location: ../model/registrar.model.php');
             require('../model/registrar.model.php');
+            $registrar = new Registrar();
+            $registrar->registrar($nome,$email,$password,$sexo);
        }
