@@ -21,13 +21,7 @@ require("../controller/verificalogado.controller.php");
             <div class="contact-info">
                 <?php
                  //   session_start();
-                    if (isset($_GET['index']) && isset($_SESSION['contatos'])){
-                        $index = $_GET['index'];
-                        $contatos = $_SESSION['contatos'];
-                        echo "<h2>{$contatos[$index]['name']}</h2>";
-                        echo "<p>{$contatos[$index]['email']}</p>";
-                        echo "Telefone: <p>{$contatos[$index]['phone']}</p>";
-                    }
+                    require("../controller/buscarcontato.controller.php");
                 ?>        
                 <div class="buttons">
                 <form class= "editar"  action="../controller/editarcontato.controller.php" method="POST">

@@ -7,5 +7,6 @@
         $editarcontato->name = $_POST['name'];
         $editarcontato->email = $_POST['email'];
         $editarcontato->phone = $_POST['phone'];
-        $editarcontato->editar_contato($editarcontato->name,$editarcontato->email,$editarcontato->phone);
+        $index = $_POST['index'];
+        $editarcontato->editar_contato($editarcontato->name,$editarcontato->email,$editarcontato->phone, $index);
     }

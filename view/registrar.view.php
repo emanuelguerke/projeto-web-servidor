@@ -38,9 +38,8 @@
       if(isset($_GET['acao'])){
          $acao = $_GET['acao'];
          if ($acao == 'erro-campos-cadastro') {
-           // $mensagem = "erro nos campos";
             echo '<div><p style="color: red">*preencha todos os campos</p><div>';
-        }else if($acao == 'email-cadastro'){
+        }else if($acao == 'email-cadastrado'){
           echo '<div><p style="color: red">*email já cadastrado</p><div>';
         }
        }

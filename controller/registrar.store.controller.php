@@ -1,7 +1,8 @@
 <?php
       $nome = $_POST['nome'] ?? '';
       $email = $_POST['email'] ?? '';
-      $password = $_POST['password'] ??'';
+      //password hash pra ser utilizado com o password verify
+      $password = password_hash($_POST['password'], PASSWORD_DEFAULT) ??'';
       $sexo = $_POST['sexo'] ??'';
 
       if($password == '' || $email == '' || $sexo == '' || $nome == '') {
@@ -9,13 +10,15 @@
             header('Location: index.view.php?acao=erro-campos-cadastro');
         
        }else{
-          // echo "$password e o $email e checkbox $checkbox" ;
-         //  require('controller\agenda.controller.php');
-         //   header('Location: view\agenda.view.php');
-           //  echo "$emailcadastro $passwordcadastro $nomecadastro $sexo"; 
-       //    header('Location: agenda.view.php');
-           // header('Location: ../model/registrar.model.php');
-            require('../model/registrar.model.php');
-            $registrar = new Registrar();
-            $registrar->registrar($nome,$email,$password,$sexo);
+            require("../conexao.php");
+            $sql = "SELECT id FROM usuario WHERE email = '$email'"; 
+            $result = $bd->query($sql);
+            if($result->num_rows > 0){
+              header('Location: index.view.php?acao=email-cadastrado');
+            }else{
+              require('../model/registrar.model.php');
+              $registrar = new Registrar();
+              $registrar->registrar($nome,$email,$password,$sexo);
+            }
+            
        }

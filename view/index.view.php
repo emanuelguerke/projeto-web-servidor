@@ -18,6 +18,9 @@
         else if ($acao == 'email-senha') {
             require("../controller/login.controller.php");
         }
+        else if($acao =='email-cadastrado'){
+            require("../controller/registrar.controller.php");
+        }
         else if ($acao == 'logar') {
             require('../controller/logar.controller.php');
            // header('Location: controller/logar.controller.php');

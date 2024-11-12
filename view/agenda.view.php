@@ -32,12 +32,7 @@ require("../controller/verificalogado.controller.php");
             </section>
             <h2>Lista de Contatos</h2>
             <section id="contact-list">
-                <ul>
-                    <?php  
-                     if(isset($_SESSION['contatos'])){
-                        $contatos = $_SESSION['contatos'];
-                        foreach($contatos as $key=> $contato): ?> <li><a href=contato.view.php?<?php echo "index=$key>"; ?> <?php echo $contato['name']; ?> - <?php echo $contato['email']; ?> - <?php echo $contato['phone']; ?></a></li> <?php endforeach; }?>
-                </ul>
+               <?php require('../controller/buscarcontatos.controller.php'); ?>
             </section>
             
         </main>
