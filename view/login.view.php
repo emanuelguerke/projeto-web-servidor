@@ -20,17 +20,10 @@
         <input type="password" id="password" name="password"/>
       </div>
       <br>
-      <div class="checkbox">
-        <input id="lembrar" type="checkbox" name="checkbox"/>
-        <p>Lembrar senha</p>
-      </div>
+      <br>
       <br>
       <button type="submit">Entrar</button>
       <br>
-      <br>
-      <p class="esqueceu-senha">
-        <a href="https://google.com"> Esqueci minha senha</a>
-      </p>
       
     </form>
     <div>

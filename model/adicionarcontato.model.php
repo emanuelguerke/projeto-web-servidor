@@ -6,6 +6,7 @@
         private $phone;
         private $contatos;
         private $id;
+        private $contactid;
 
         public function __construct(){
             // Vetor para armazenar os contatos
@@ -24,6 +25,10 @@
             $sql = "INSERT INTO contato (nome,email,telefone,id_usuario) VALUES ('$name', '$email', '$phone', '$id')";
             $bd->query($sql);
 
+            $contactid=mysqli_insert_id($bd);
+
+            $sql2 = "INSERT INTO imagem (id_contato) VALUES ('$contactid')";
+            $bd->query($sql2);
             $contatos = $_SESSION['contatos'];
             header('Location: agenda.view.php');
         }

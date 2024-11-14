@@ -1,6 +1,4 @@
 <?php
-    //sessão startada no verificar logado
-   // session_start();
    $index = $_POST['index'];
     class Editarcontato{
         private $index;
@@ -8,13 +6,19 @@
         private $name;
         private $email;
         private $phone;
+        private $image;
+        private $type;
+        private $size;
+        private $imagename;
         public function __construct(){
            
         }
-        public function editar_contato($name, $email, $phone,$index){
+        public function editar_contato($name, $email, $phone,$index, $image){
             require("../conexao.php");
             $sql = "UPDATE contato SET nome = '$name', email = '$email', telefone = '$phone' WHERE id = $index";
             $bd->query($sql);
+            $sql2 = "UPDATE imagem SET imagem ='$image' WHERE id_contato = $index";
+            $bd->query($sql2);
             header('Location: ../view/agenda.view.php');
             exit();
         }

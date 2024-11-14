@@ -17,7 +17,7 @@ require("../controller/verificalogado.controller.php");
         </form>
         <h1>Contato</h1>
         <div class="contact-card">
-            <img src= <?php $index = $_GET['index']; echo "../image/image{$index}.jpg"?> alt="Foto de Contato">
+           
             <div class="contact-info">
                 <?php
                  //   session_start();
