@@ -13,12 +13,19 @@
         public function __construct(){
            
         }
-        public function editar_contato($name, $email, $phone,$index, $image){
+        public function editar_contato($name, $email, $phone,$index, $image, $size, $type, $imagename){
             require("../conexao.php");
             $sql = "UPDATE contato SET nome = '$name', email = '$email', telefone = '$phone' WHERE id = $index";
             $bd->query($sql);
-            $sql2 = "UPDATE imagem SET imagem ='$image' WHERE id_contato = $index";
+            $sql2 = "UPDATE imagem SET imagem ='$image', tamanho ='$size', tipo ='$type', nome = '$imagename' WHERE id_contato = $index";
             $bd->query($sql2);
+            header('Location: ../view/agenda.view.php');
+            exit();
+        }
+        public function editar_contato2($name, $email, $phone,$index){
+            require("../conexao.php");
+            $sql = "UPDATE contato SET nome = '$name', email = '$email', telefone = '$phone' WHERE id = $index";
+            $bd->query($sql);
             header('Location: ../view/agenda.view.php');
             exit();
         }

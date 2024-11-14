@@ -35,6 +35,7 @@ Abrir no navegador http://localhost/projeto-web-servidor/view/index.view.php
 2ª entrega
 - [x] Salvar e buscar no banco de dados mysql(mysqli)
 - [x] Refatorar model para orientado a objeto
+- [ ] Refatorar controller para orientado a objeto
 - [ ] Sistema de rotas usando composer
 
 

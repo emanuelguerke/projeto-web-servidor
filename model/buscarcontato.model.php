@@ -36,7 +36,7 @@
            
             echo "<h2>{$row['nome']}</h2>";
             echo "<p>{$row['email']}</p>";
-            echo "Telefone: <p>{$row['telefone']}</p>";
+            echo "<p>Telefone: {$row['telefone']}</p>";
             
         }
 
