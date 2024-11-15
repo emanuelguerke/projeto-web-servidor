@@ -20,7 +20,7 @@
             $_SESSION['contatos'][] = $contato;
 
             //fazendo pelo banco
-            require("../conexao.php");
+            require("conexao.php");
             $id= $_SESSION['userid'];
             $sql = "INSERT INTO contato (nome,email,telefone,id_usuario) VALUES ('$name', '$email', '$phone', '$id')";
             $bd->query($sql);
@@ -30,7 +30,7 @@
             $sql2 = "INSERT INTO imagem (id_contato) VALUES ('$contactid')";
             $bd->query($sql2);
             $contatos = $_SESSION['contatos'];
-            header('Location: agenda.view.php');
+            header('Location: agenda');
         }
         public function __get($propriedade){
             return $this->$propriedade;

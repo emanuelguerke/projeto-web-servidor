@@ -1,5 +1,5 @@
 <?php
-require("../controller/verificalogado.controller.php");
+require("controller/verificalogado.controller.php");
 ?>
 
 <head>
@@ -17,7 +17,7 @@ require("../controller/verificalogado.controller.php");
         <main>
             <section id="contact-form">
                 <h2>Adicionar Novo Contato</h2>
-                <form  action="index.view.php?acao=adicionarcontato" method="POST">
+                <form  action="adicionarcontato" method="POST">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" required>
                     
@@ -32,12 +32,12 @@ require("../controller/verificalogado.controller.php");
             </section>
             <h2>Lista de Contatos</h2>
             <section id="contact-list">
-               <?php require('../controller/buscarcontatos.controller.php'); ?>
+               <?php require('controller/buscarcontatos.controller.php'); $buscarcontatos = new Buscarcontatos(); $buscarcontatos->buscarcontatos()?>
             </section>
             
         </main>
         <footer>
-            <a href="..\controller\logout.controller.php" class="button">Deslogar</a>
+            <a href="controller\logout.controller.php" class="button">Deslogar</a>
             <p>&copy; UTFPR 2024 Agenda de Contatos.</p>
         </footer>
     </div>

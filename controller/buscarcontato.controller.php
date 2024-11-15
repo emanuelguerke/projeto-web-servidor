@@ -1,7 +1,15 @@
 <?php
-    require("../model/buscarcontato.model.php");
-    $index = $_GET['index'];
-    $buscarcontato = new Buscarcontato();
-    $buscarcontato->buscarcontato($index);
+
+class BuscarContatoController {
+    public function buscarcontato($index) {
+        require("model/buscarcontato.model.php");
+        $buscarcontato = new BuscarContato();
+        $contato = $buscarcontato->buscarcontato($index);
+
+        require("view/contato.view.php");
+    }
+}
+
+   
     
     

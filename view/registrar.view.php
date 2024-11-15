@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="../style/registrar.css">
 <div class="formulario">
-<form action="index.view.php?acao=registrarusuario" method="post">
+<form action="registrarusuario" method="post">
 
       <div class="titulo">
         <h1>Faça o seu cadastro</h1>

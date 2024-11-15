@@ -16,11 +16,11 @@
                 'sexo' => $sexo
             ];
             //fazendo pelo banco
-            require("../conexao.php");
+            require("conexao.php");
             $sql = "INSERT INTO usuario (nome, email,senha,sexo) VALUES ('$nome', '$email', '$password', '$sexo')";
             $bd->query($sql);
             echo "Usuário cadastrado com sucesso!";
-            header('Location: ../view/agenda.view.php');
+            header('Location: agenda');
         }
     }
   

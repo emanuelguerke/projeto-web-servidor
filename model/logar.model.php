@@ -3,7 +3,7 @@
 
 
         public function logar($email, $password){
-          require("../conexao.php");
+          require("conexao.php");
           // Verifica se o email existe no banco de dados
           $sql = "SELECT id, senha FROM usuario WHERE email = '$email'";
           $result = $bd->query($sql);

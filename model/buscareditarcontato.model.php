@@ -6,7 +6,7 @@
         private $id;
         private $imagem;
         public function buscarcontato($index){
-            require("../conexao.php");
+            require("conexao.php");
             $id = $_SESSION['userid'];
             $sql = "SELECT nome, email, telefone,id FROM contato where id_usuario = $id AND id = $index";
             $result = $bd->query($sql);

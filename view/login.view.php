@@ -3,7 +3,7 @@
 </head>
 <body>
 <div class="formulario">
-<form class= "logar" action="index.view.php?acao=logar" method="POST">
+<form class= "logar" action="logar" method="POST">
   <div id="mensagem"></div>
       <div class="titulo">
         <h1>Faça o login</h1>
@@ -27,7 +27,7 @@
       
     </form>
     <div>
-    <form action="registrar.view.php">
+    <form action="registrar">
       <button class="nova-conta">Criar nova conta</button>
     </form>
     <?php 

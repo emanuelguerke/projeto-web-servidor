@@ -1,7 +1,7 @@
 <?php
     class Buscarcontatos{
         public function buscarcontatos(){
-            require("../conexao.php");
+            require("conexao.php");
             $id = $_SESSION['userid'];
             $sql = "SELECT nome, email, telefone,id FROM contato where id_usuario = $id";
             $result = $bd->query($sql);
@@ -10,7 +10,7 @@
                 echo "<ul>";
                 while($row = $result->fetch_assoc()) {
                     //echo "<li>" . $row["nome"]. " - " . $row["email"]. " - " . $row["telefone"]. "</li>";
-                    echo "<li><a href=contato.view.php?index={$row['id']}>". $row['nome']." - ".   $row['email']. " - ". $row['telefone']."</a></li>";
+                    echo "<li><a href=contato/{$row['id']}>". $row['nome']." - ".   $row['email']. " - ". $row['telefone']."</a></li>";
                 }
                 echo "</ul>";
             } else {
