@@ -28,6 +28,9 @@
             $bd->query($sql);
             header('Location: agenda');
             exit();
+        }public function editar_contato_erro($index){
+            $buscarcontato = new BuscarContatoController();
+            $buscarcontato->buscarcontato( $index);
         }
 
         public function __set($propriedade, $valor){

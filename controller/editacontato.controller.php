@@ -1,4 +1,5 @@
 <?php 
+require("vendor/autoload.php");
     class EditaContatoController{
         public function editar(){
             require("model/editarcontato.model.php");
@@ -11,9 +12,15 @@
             $editarcontato->phone = $_POST['phone'];
             
             if($_FILES['imagem']['size'] > 500000){
-                echo "Imagens acima de 500kb não serão aceitas";
+                
+                echo "<div class ='erro'>Imagens acima de 500kb não serão aceitas<br><div>";
+                // echo htmlentities($_POST['index']);
+                // echo '<input type="hidden" name="index" value="' . $index . '">';
+                $editarcontato->editar_contato_erro($index);
+
             }else if(strlen($editarcontato->name) > 30 || strlen($editarcontato->email) > 30 || strlen($editarcontato->phone) > 30){
-                echo "Cada campo não pode ter mais que 30 caracteres";
+                echo "<div class ='erro'>Cada campo não pode ter mais que 30 caracteres<br><div>";
+                $editarcontato->editar_contato_erro($index);
             }
             else if ( !empty($_FILES['imagem']['tmp_name'] && $_FILES['imagem']['size'] < 500000)){
                 $editarcontato->image = $_FILES['imagem']['tmp_name'];

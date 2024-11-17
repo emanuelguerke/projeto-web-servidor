@@ -3,5 +3,6 @@
         public function editar(){
             require("view/editarcontato.view.php");
         }
+        
     }
     

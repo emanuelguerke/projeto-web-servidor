@@ -15,7 +15,7 @@ body {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
+    width: 450px;
     max-width: 500px;
     
 }
@@ -40,7 +40,12 @@ form{
     flex-wrap: wrap;
     border: 1px solid #242424;
 }
-
+.erro{
+    margin: -8px;
+    text-align: center;
+    font-size: 15px;
+    color:red;
+}
 .contact-card img {
     border-radius: 50%;
     margin-right: 20px;
