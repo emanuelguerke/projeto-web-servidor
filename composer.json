@@ -1,0 +1,16 @@
+{
+    "name": "emanu/projeto-web-servidor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "emanuelguerke",
+            "email": "emanuelguerke@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["./"]
+    },
+    "require": {
+        "pecee/simple-router": "^5.4"
+    }
+}
