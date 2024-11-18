@@ -35,14 +35,12 @@
       <button type="submit" value="registrar">Registrar</button>
 
       <?php 
-      if(isset($_GET['acao'])){
-         $acao = $_GET['acao'];
-         if ($acao == 'erro-campos-cadastro') {
-            echo '<div><p style="color: red">*preencha todos os campos</p><div>';
-        }else if($acao == 'email-cadastrado'){
-          echo '<div><p style="color: red">*email já cadastrado</p><div>';
-        }
-       }
+       if ( $_SESSION['url'] == '/erro-campos-cadastro/') {
+        // $mensagem = "erro nos campos";
+         echo '<div><p style="color: red">*preencha todos os campos</p><div>';
+       }else if($_SESSION['url'] == '/email-cadastrado/'){
+         echo '<div><p style="color: red">*email já cadastrado</p><div>';
+     }
       ?>
 
     </form>

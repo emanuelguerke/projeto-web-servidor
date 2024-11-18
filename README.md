@@ -42,6 +42,5 @@ Abrir no navegador http://projeto-web-servidor.test (ou o nome que você tenha c
 - [x] Refatorar controller para orientado a objeto
 - [x] Autoload/Sistema de rotas usando composer 
 
---as mensagens de erro ainda não estão aparecendo por causa das rotas--
 
 

@@ -31,16 +31,13 @@
       <button class="nova-conta">Criar nova conta</button>
     </form>
     <?php 
-       
-       if(isset($_GET['acao'])){
-         $acao = $_GET['acao'];
-         if ($acao == 'erro-campos') {
-           // $mensagem = "erro nos campos";
-            echo '<div><p style="color: red">*preencha todos os campos</p><div>';
-          }else if($acao == 'email-senha'){
-            echo '<div><p style="color: red">*Senha ou Email incorretos</p><div>';
-        }
-       }
+       //echo $_SESSION['url'];
+       if ( $_SESSION['url'] == '/erro-campos/') {
+        // $mensagem = "erro nos campos";
+         echo '<div><p style="color: red">*preencha todos os campos</p><div>';
+       }else if($_SESSION['url'] == '/email-senha/'){
+         echo '<div><p style="color: red">*Senha ou Email incorretos</p><div>';
+     }
        ?>
     </div>
 </div>

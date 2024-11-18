@@ -1,7 +1,13 @@
 <?php
+if(!isset($_SESSION)){ 
+    session_start(); 
+} 
+
 require("vendor/autoload.php");
 
 use Pecee\SimpleRouter\SimpleRouter as Router;
+
+$_SESSION['url'] = Router::getUrl();
 
 Router::get('/', 'AgendaController@index');
 Router::get('/agenda', 'AgendaController@index');

@@ -3,7 +3,10 @@
 class BuscarContato {
     public function buscarcontato($index) {
         require("conexao.php");
-        session_start();
+        if(!isset($_SESSION)) 
+        { 
+          session_start(); 
+        } 
         $id = $_SESSION['userid'];
         $sql = "SELECT nome, email, telefone, id FROM contato WHERE id_usuario = $id AND id = $index";
         $result = $bd->query($sql);
