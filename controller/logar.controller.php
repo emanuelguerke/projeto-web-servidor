@@ -1,4 +1,5 @@
 <?php
+    require("vendor/autoload.php");
     class LogarController{
         public function logar(){
             require("model/logar.model.php");

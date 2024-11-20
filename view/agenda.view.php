@@ -21,13 +21,13 @@
                 <h2>Adicionar Novo Contato</h2>
                 <form  action="adicionarcontato" method="POST">
                     <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="nome" required>
                     
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
                     
                     <label for="phone">Telefone:</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" pattern="\(?\d{2}\)?\s?9\d{4}-?\d{4}" placeholder="(XX) 9XXXX-XXXX" title="Formato esperado: (XX) 9XXXX-XXXX" required>
                     
                     <button type="submit">Adicionar Contato</button>
                 </form>

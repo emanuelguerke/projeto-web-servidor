@@ -2,14 +2,15 @@
 require("vendor/autoload.php");
     class EditaContatoController{
         public function editar(){
-            require("model/editarcontato.model.php");
-    
-        $editarcontato = new Editarcontato();
+            
+            $editarcontato = new Editarcontato();
+            $validartelefone = new ValidarTelefoneController();
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit'])) {
             $editarcontato->name = $_POST['name'];
             $editarcontato->email = $_POST['email'];
             $editarcontato->phone = $_POST['phone'];
+            $index = $_POST['index'];
             
             if($_FILES['imagem']['size'] > 500000){
                 
@@ -20,6 +21,9 @@ require("vendor/autoload.php");
 
             }else if(strlen($editarcontato->name) > 30 || strlen($editarcontato->email) > 30 || strlen($editarcontato->phone) > 30){
                 echo "<div class ='erro'>Cada campo não pode ter mais que 30 caracteres<br><div>";
+                $editarcontato->editar_contato_erro($index);
+            }else if(!$validartelefone->validarTelefone($editarcontato->phone)){
+                echo "<div class ='erro'>o telefone precisa seguir o padrão (XX) 9XXXX-XXXX ou XX9XXXXXXXX <br><div>";
                 $editarcontato->editar_contato_erro($index);
             }
             else if ( !empty($_FILES['imagem']['tmp_name'] && $_FILES['imagem']['size'] < 500000)){

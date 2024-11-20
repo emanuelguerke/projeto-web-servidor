@@ -1,4 +1,5 @@
 <?php
+      require("vendor/autoload.php");
       class RegistrarUsuario{
         function registrarusuario(){
           $nome = $_POST['nome'] ?? '';
@@ -22,7 +23,6 @@
                 if($result->num_rows > 0){
                   header('Location: email-cadastrado');
                 }else{
-                  require('model/registrar.model.php');
                   $registrar = new Registrar();
                   $registrar->registrar($nome,$email,$password,$sexo);
                 }
