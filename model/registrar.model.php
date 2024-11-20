@@ -16,7 +16,11 @@
                 'sexo' => $sexo
             ];
             //fazendo pelo banco
-            require("conexao.php");
+            
+            $conexao = new Conexao();
+            $conexao->conexao();
+            $bd = $conexao->bd;
+
             $sql = "INSERT INTO usuario (nome, email,senha,sexo) VALUES ('$nome', '$email', '$password', '$sexo')";
             $bd->query($sql);
             echo "Usuário cadastrado com sucesso!";

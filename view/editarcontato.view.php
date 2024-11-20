@@ -1,6 +1,7 @@
 <?php
-require("controller/verificalogado.controller.php");
-require("controller/editacontato.controller.php");
+    require("vendor/autoload.php");
+    $verificalogado = New VerificaLogado();
+    $verificalogado->verificalogado();
 ?>
 
 <!DOCTYPE html>

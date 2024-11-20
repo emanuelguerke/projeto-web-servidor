@@ -1,5 +1,7 @@
 <?php
-require("controller/verificalogado.controller.php");
+    require("vendor/autoload.php");
+    $verificalogado = new VerificaLogado();
+    $verificalogado->verificalogado();
 ?>
 
 <head>
@@ -32,7 +34,7 @@ require("controller/verificalogado.controller.php");
             </section>
             <h2>Lista de Contatos</h2>
             <section id="contact-list">
-               <?php require('controller/buscarcontatos.controller.php'); $buscarcontatos = new Buscarcontatos(); $buscarcontatos->buscarcontatos()?>
+               <?php $buscarcontatos = new Buscarcontatos(); $buscarcontatos->buscarcontatos()?>
             </section>
             
         </main>

@@ -1,7 +1,11 @@
 <?php
     class Buscarcontatos{
         public function buscarcontatos(){
-            require("conexao.php");
+            
+            $conexao = new Conexao();
+            $conexao->conexao();
+            $bd = $conexao->bd;
+
             $id = $_SESSION['userid'];
             $sql = "SELECT nome, email, telefone,id FROM contato where id_usuario = $id";
             $result = $bd->query($sql);

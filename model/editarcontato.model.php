@@ -14,7 +14,11 @@
            
         }
         public function editar_contato($name, $email, $phone,$index, $image, $size, $type, $imagename){
-            require("conexao.php");
+            
+            $conexao = new Conexao();
+            $conexao->conexao();
+            $bd = $conexao->bd;
+
             $id_usuario = $_SESSION['userid'];
             $sql = "UPDATE contato SET nome = '$name', email = '$email', telefone = '$phone' WHERE id = $index AND id_usuario = $id_usuario";
             $bd->query($sql);
@@ -24,7 +28,11 @@
             exit();
         }
         public function editar_contato2($name, $email, $phone,$index){
-            require("conexao.php");
+            
+            $conexao = new Conexao();
+            $conexao->conexao();
+            $bd = $conexao->bd;
+            
             $id_usuario = $_SESSION['userid'];
             $sql = "UPDATE contato SET nome = '$name', email = '$email', telefone = '$phone' WHERE id = $index AND id_usuario = $id_usuario";
             $bd->query($sql);

@@ -3,10 +3,14 @@
 
 
         public function logar($email, $password){
-          require("conexao.php");
-          // Verifica se o email existe no banco de dados
-          $sql = "SELECT id, senha FROM usuario WHERE email = '$email'";
-          $result = $bd->query($sql);
+          
+
+            $conexao = new Conexao();
+            $conexao->conexao();
+            $bd = $conexao->bd;  
+            // Verifica se o email existe no banco de dados
+            $sql = "SELECT id, senha FROM usuario WHERE email = '$email'";
+            $result = $bd->query($sql);
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();

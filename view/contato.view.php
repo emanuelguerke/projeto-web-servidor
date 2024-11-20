@@ -1,5 +1,7 @@
 <?php
-require("controller/verificalogado.controller.php");
+    require("vendor/autoload.php");
+    $verificalogado = new VerificaLogado();
+    $verificalogado->verificalogado();
 ?>
 
 <!DOCTYPE html>

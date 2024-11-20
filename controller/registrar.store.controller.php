@@ -12,7 +12,11 @@
                 header('Location: erro-campos-cadastro');
             
            }else{
-                require("conexao.php");
+                
+                $conexao = new Conexao();
+                $conexao->conexao();
+                $bd = $conexao->bd;
+
                 $sql = "SELECT id FROM usuario WHERE email = '$email'"; 
                 $result = $bd->query($sql);
                 if($result->num_rows > 0){

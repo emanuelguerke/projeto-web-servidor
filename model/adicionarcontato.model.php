@@ -1,5 +1,9 @@
 <?php
-    session_start();
+     if(!isset($_SESSION)) 
+     { 
+       session_start(); 
+     } 
+    require("vendor/autoload.php");
     class Adicionarcontato{
         private $name;
         private $email;
@@ -20,9 +24,15 @@
             $_SESSION['contatos'][] = $contato;
 
             //fazendo pelo banco
-            require("conexao.php");
+           // require("conexao.php");
+            $conexao = new Conexao();
+            $conexao->conexao();
+
             $id= $_SESSION['userid'];
             $sql = "INSERT INTO contato (nome,email,telefone,id_usuario) VALUES ('$name', '$email', '$phone', '$id')";
+            
+            $bd = $conexao->bd;
+
             $bd->query($sql);
 
             $contactid=mysqli_insert_id($bd);
