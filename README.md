@@ -41,6 +41,15 @@ Abrir no navegador http://projeto-web-servidor.test (ou o nome que você tenha c
 - [x] Refatorar model para orientado a objeto
 - [x] Refatorar controller para orientado a objeto
 - [x] Autoload/Sistema de rotas usando composer 
+- [x] Melhorar validações  
+- [x] Melhorar estrutura do projeto
 
 
 
+Usuario e Senha para testes rápidos sem precisar cadastrar novo usuário
+
+Usuario: mainards@gmail.com
+Senha: 1234
+
+emanuel@gmail.com
+123

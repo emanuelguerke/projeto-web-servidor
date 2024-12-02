@@ -18,7 +18,7 @@
                 }
                 echo "</ul>";
             } else {
-                echo "Nenhum contato encontrado";
+                echo "<div>&emsp;&emsp; Nenhum contato encontrado</div>";
             }
             
             $bd->close();

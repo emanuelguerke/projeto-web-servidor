@@ -65,6 +65,7 @@ main {
 #contact-list {
     max-height: 200px; /* Defina a altura máxima */
     overflow-y: auto; /* Adicione a rolagem vertical */
+    margin-left: -30px
 }
 
 h2 {

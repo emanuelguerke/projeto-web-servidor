@@ -2,10 +2,8 @@
 
 class BuscarContato {
     public function buscarcontato($index) {
-        if(!isset($_SESSION)) 
-        { 
-          session_start(); 
-        } 
+        $verificalogado = new VerificaLogado();
+        $verificalogado->verificalogado(); 
         
         $conexao = new Conexao();
         $conexao->conexao();

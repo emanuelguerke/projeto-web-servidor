@@ -8,7 +8,8 @@
         private $sexo;
         function registrar($nome, $email, $password, $sexo){
             //fazendo pela sessão
-            session_start();
+            $verificalogado = new VerificaLogado();
+            $verificalogado->verificalogado();
             $_SESSION['usuarios'][] = [
                 'nome' => $nome,
                 'email' => $email,

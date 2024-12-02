@@ -25,6 +25,15 @@ Router::get('/erro-campos', 'LoginController@login');
 Router::get('/email-senha', 'LoginController@login');
 Router::get('/erro-campos-cadastro', 'RegistrarController@registrar');
 Router::get('/email-cadastrado', 'RegistrarController@registrar');
+Router::get('/erro-campos-tamanho-maximo', 'EditarContatoController@editar');
+Router::get('/erro-tamanho-maximo-imagem', 'EditarContatoController@editar');
+Router::get('/erro-telefone', 'EditarContatoController@editar');
+Router::get('/erro-campo-vazio', 'EditarContatoController@editar');
+Router::get('/erro-campo-maximo', 'AgendaController@index');
+Router::get('/erro-campo-vazio-adicionar', 'AgendaController@index');
+Router::get('/erro-telefone-adicionar', 'AgendaController@index');
+
+
 
 
 Router::start();

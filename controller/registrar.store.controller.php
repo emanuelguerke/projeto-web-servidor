@@ -8,7 +8,7 @@
           $password = password_hash($_POST['password'], PASSWORD_DEFAULT) ??'';
           $sexo = $_POST['sexo'] ??'';
     
-          if($password == '' || $email == '' || $sexo == '' || $nome == '') {
+          if($_POST['password'] == '' || $email == '' || $sexo == '' || $nome == '') {
             //  header('Location: index.view.php?acao=erro-campos');
                 header('Location: erro-campos-cadastro');
             

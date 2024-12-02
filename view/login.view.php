@@ -37,7 +37,7 @@
          echo '<div><p style="color: red">*preencha todos os campos</p><div>';
        }else if($_SESSION['url'] == '/email-senha/'){
          echo '<div><p style="color: red">*Senha ou Email incorretos</p><div>';
-     }
+      }
        ?>
     </div>
 </div>

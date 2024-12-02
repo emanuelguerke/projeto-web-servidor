@@ -1,9 +1,7 @@
 <?php
-     if(!isset($_SESSION)) 
-     { 
-       session_start(); 
-     } 
     require("vendor/autoload.php");
+    $verificalogado = new VerificaLogado();
+    $verificalogado->verificalogado();
     class Adicionarcontato{
         private $name;
         private $email;

@@ -13,21 +13,31 @@
 <body>
     <div class="container">
         <header>
-           
+          
             <h1>Bem-vindo à sua Agenda de Contatos</h1>
         </header>
         <main>
             <section id="contact-form">
+            <?php 
+                if ( $_SESSION['url'] == '/erro-campo-maximo/') {
+                    echo '<div><p style="color: red">*Cada campo não pode ter mais que 30 caracteres</p><div>';
+                }else if($_SESSION['url'] == '/erro-campo-vazio-adicionar/'){
+                    echo '<div><p style="color: red">*Preencha todos os campos</p><div>';
+                }else if($_SESSION['url'] == '/erro-telefone-adicionar/'){
+                    echo '<div><p style="color: red">*Coloque um numero valido (xx) 9xxxx-xxxx ou xx 9xxxxxxxx ou xx9xxxxxxxx</p><div>';
+                }
+                
+            ?>
                 <h2>Adicionar Novo Contato</h2>
                 <form  action="adicionarcontato" method="POST">
                     <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" placeholder="nome" required>
+                    <input type="text" id="name" name="name" placeholder="nome">
                     
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+                    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com">
                     
                     <label for="phone">Telefone:</label>
-                    <input type="tel" id="phone" name="phone" pattern="\(?\d{2}\)?\s?9\d{4}-?\d{4}" placeholder="(XX) 9XXXX-XXXX" title="Formato esperado: (XX) 9XXXX-XXXX" required>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) 9XXXX-XXXX" title="Formato esperado: (XX) 9XXXX-XXXX">
                     
                     <button type="submit">Adicionar Contato</button>
                 </form>
