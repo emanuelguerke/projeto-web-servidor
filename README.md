@@ -51,5 +51,5 @@ Usuario e Senha para testes rápidos sem precisar cadastrar novo usuário
 Usuario: mainards@gmail.com
 Senha: 1234
 
-emanuel@gmail.com
-123
+Usuario: emanuel@gmail.com
+Senha: 123
