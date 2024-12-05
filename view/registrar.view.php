@@ -40,7 +40,9 @@
          echo '<div><p style="color: red">*preencha todos os campos</p><div>';
        }else if($_SESSION['url'] == '/email-cadastrado/'){
          echo '<div><p style="color: red">*email já cadastrado</p><div>';
-     }
+     }else if($_SESSION['url'] == '/erro-campo-email/'){
+      echo '<div><p style="color: red">*insira um email valido</p><div>';
+  }
       ?>
 
     </form>

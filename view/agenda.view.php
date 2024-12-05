@@ -24,7 +24,9 @@
                 }else if($_SESSION['url'] == '/erro-campo-vazio-adicionar/'){
                     echo '<div><p style="color: red">*Preencha todos os campos</p><div>';
                 }else if($_SESSION['url'] == '/erro-telefone-adicionar/'){
-                    echo '<div><p style="color: red">*Coloque um numero valido (xx) 9xxxx-xxxx ou xx 9xxxxxxxx ou xx9xxxxxxxx</p><div>';
+                    echo '<div><p style="color: red">*Coloque um numero valido (xx) 9xxxx-xxxx ou xx 9xxxxxxxx ou xx9xxxxxxxx ou xxxx-xxxx ou (xx) xxxx-xxxx ou xxx</p><div>';
+                }else if($_SESSION['url'] == '/erro-email-adicionar/'){
+                    echo '<div><p style="color: red">*Coloque um E-mail valido</p><div>';
                 }
                 
             ?>

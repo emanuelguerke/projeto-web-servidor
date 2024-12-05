@@ -4,7 +4,7 @@
         public function adicionarcontato(){
             $adicionarcontato = new Adicionarcontato();
             $validartelefone = new ValidarTelefoneController();
-        
+            $validaremail = new ValidarEmailController();
             if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $adicionarcontato->name = $_POST['name'];
                 $adicionarcontato->email = $_POST['email'];
@@ -17,6 +17,8 @@
                     header('Location: erro-campo-vazio-adicionar');
                 }else if(!$validartelefone->validartelefone($adicionarcontato->phone)){
                     header('Location: erro-telefone-adicionar');
+                }else if(!$validaremail->validaremail($adicionarcontato->email)){
+                    header('Location: erro-email-adicionar');
                 }
                 else{
                     $adicionarcontato->adicionar_contato($adicionarcontato->name, $adicionarcontato->email, $adicionarcontato->phone);

@@ -5,6 +5,7 @@ require("vendor/autoload.php");
             
             $editarcontato = new Editarcontato();
             $validartelefone = new ValidarTelefoneController();
+            $validaremail = new ValidarEmailController();
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit'])) {
             $editarcontato->name = $_POST['name'];
@@ -25,7 +26,10 @@ require("vendor/autoload.php");
                 echo "<div class ='erro'>Cada campo não pode ter mais que 30 caracteres<br><div>";
                 $editarcontato->editar_contato_erro($index);
             }else if(!$validartelefone->validarTelefone($editarcontato->phone)){
-                echo "<div class ='erro'>o telefone precisa seguir o padrão (XX) 9XXXX-XXXX ou XX9XXXXXXXX <br><div>";
+                echo "<div class ='erro'>o telefone precisa ser valido <br><div>";
+                $editarcontato->editar_contato_erro($index);
+            }else if(!$validaremail->validarEmail($editarcontato->email)){
+                echo "<div class ='erro'>o email precisa ser valido <br><div>";
                 $editarcontato->editar_contato_erro($index);
             }
             else if ( !empty($_FILES['imagem']['tmp_name'] && $_FILES['imagem']['size'] < 500000)){

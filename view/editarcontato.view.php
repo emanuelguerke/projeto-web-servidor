@@ -23,7 +23,9 @@
        }else if($_SESSION['url'] == '/erro-tamanho-maximo-imagem/'){
          echo '<div><p style="color: red">*Imagens acima de 500kb não serão aceitas</p><div>';
       }else if($_SESSION['url'] == '/erro-telefone/'){
-        echo '<div><p style="color: red">*o telefone precisa seguir o padrão (XX) 9XXXX-XXXX ou XX9XXXXXXXX </p><div>';
+        echo '<div><p style="color: red">*Coloque um numero valido (xx) 9xxxx-xxxx ou xx 9xxxxxxxx ou xx9xxxxxxxx ou xxxx-xxxx ou (xx) xxxx-xxxx ou xxx </p><div>';
+      }else if($_SESSION['url'] == '/erro-email/'){
+        echo '<div><p style="color: red">*O email precisa ser valido';
       }else if($_SESSION['url'] == '/erro-campo-vazio/'){
         echo '<div><p style="color: red">*Todos os campos precisam ser preenchidos</p><div>';
       }

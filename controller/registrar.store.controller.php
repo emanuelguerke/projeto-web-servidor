@@ -7,13 +7,14 @@
           //password hash pra ser utilizado com o password verify
           $password = password_hash($_POST['password'], PASSWORD_DEFAULT) ??'';
           $sexo = $_POST['sexo'] ??'';
-    
+          $validaremail = new ValidarEmailController();
           if($_POST['password'] == '' || $email == '' || $sexo == '' || $nome == '') {
             //  header('Location: index.view.php?acao=erro-campos');
                 header('Location: erro-campos-cadastro');
             
+           }else if(!$validaremail->validarEmail($email)){
+                header('Location: erro-campo-email');
            }else{
-                
                 $conexao = new Conexao();
                 $conexao->conexao();
                 $bd = $conexao->bd;
